@@ -9,22 +9,22 @@
     let email:string = $state('')
     let password:string = $state('')
 
-    async function handlesubmit(){
-        console.info(name,email,password)
-        const { data, error } = await authClient.signUp.email({
-  email,
-  password,
-  name,
-  fetchOptions:{
-    onSuccess(){
-        console.info(`successfully signed up ${name}`)
-    }
-  }
-});
-    if (error){
-        console.warn(error)
-    }
-    }
+//     async function handlesubmit(){
+//         console.info(name,email,password)
+//         const { data, error } = await authClient.signUp.email({
+//   email,
+//   password,
+//   name,
+//   fetchOptions:{
+//     onSuccess(){
+//         console.info(`successfully signed up ${name}`)
+//     }
+//   }
+// });
+//     if (error){
+//         console.warn(error)
+//     }
+//     }
   </script>
   <Card.Root class="mx-auto w-full max-w-sm mt-10">
     <Card.Header>
@@ -49,7 +49,7 @@
           </div>
           <Input id="password-{id}" type="password" bind:value={password} required />
         </div>
-        <Button type="submit" class="w-full" onclick={handlesubmit}>Get started</Button>
+        <Button type="submit" class="w-full">Get started</Button>
         <Button variant="outline" class="w-full">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path

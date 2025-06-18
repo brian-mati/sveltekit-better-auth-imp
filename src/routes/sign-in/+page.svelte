@@ -11,10 +11,9 @@
 
     async function handlesubmit(){
         console.info(name,email,password)
-        const { data, error } = await authClient.signUp.email({
+        const { error } = await authClient.signIn.email({
   email,
   password,
-  name,
   fetchOptions:{
     onSuccess(){
         console.info(`successfully signed up ${name}`)
